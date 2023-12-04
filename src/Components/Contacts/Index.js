@@ -23,7 +23,7 @@ console.log(contacts);
   
   return (
     <div className="container">
-      <h2>Contacts</h2>
+      <h2 style={{textAlign:'center'}}>Contacts</h2>
     <List contacts={contacts}/>
     <Form addContact={setContacts} contacts={contacts} />
     </div>
