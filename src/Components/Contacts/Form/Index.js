@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import  './style.css';
+
 
 export default function Form({addContact,contacts}) {
 const[form,setForm]=useState({fullname:"",phone_number:""})
@@ -22,14 +24,13 @@ const onSubmit=(e)=>{
   return (
     <form onSubmit={onSubmit}>
     <div>
-     <input name="fullname" placeholder='Full Name' onChange={onChangeInput} />
+     <input className='inputbox' name="fullname" placeholder='Full Name' onChange={onChangeInput} />
+    </div>
+    <div>
+     <input className='inputbox' name="phone_number" placeholder='Phone Number' onChange={onChangeInput} />
     </div>
 
-    <div>
-     <input name="phone_number" placeholder='Phone Number' onChange={onChangeInput} />
-    </div>
-
-    <div>
+    <div className='btn'>
         <button onClick={onSubmit}>Add</button>
     </div>
 
